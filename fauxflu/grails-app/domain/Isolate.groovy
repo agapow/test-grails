@@ -1,10 +1,10 @@
 class Isolate {
 
    static transients = [
-      # fields not to persist
+      // fields not to persist
    ]
    static constraints = {
-      # restrictions on fields
+      // restrictions on fields
       releaseDate(nullable: true)
       created(nullable: true)
       updated(nullable: true)
@@ -12,24 +12,17 @@ class Isolate {
    
    String strain
    String serotype
-   String host character varying(255),
-   String isolation_source character varying(255),
-   String passage_history character varying(255),
-   String country character varying(255),
+   String host
+   String isolation_source
+   String passage_history
+   String country
    Date collected
-   
-   note text,
-
-   epidemic_id integer,
-   
-   String data_source character varying(255),
-   String region character varying(255),
-   
-   cultured boolean,
-   String local_identifier character varying(255),
-   
-   CONSTRAINT isolates_pkey PRIMARY KEY (id)
-
+   String note
+   Integer epidemic_id
+   String data_source
+   String region
+   Boolean cultured
+   String local_identifier
    Date created
    Date updated
    
